@@ -49,54 +49,66 @@ input {
 #slide-1:checked ~ .slider {
   transform: translateX(0%);
 }
+
 #slide-2:checked ~ .slider {
   transform: translateX(-20%);
 }
+
 #slide-3:checked ~ .slider {
   transform: translateX(-40%);
 }
+
 #slide-4:checked ~ .slider {
   transform: translateX(-60%);
 }
+
 #slide-5:checked ~ .slider {
   transform: translateX(-80%);
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.container-slider__items {
+.container-slider__items {  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 1rem;  
 }
 
-.container-slider__descr {
-  display: flex; 
-  transition: 0.8s; 
+.container-slider__descr {  
+  display: flex;
+  transition: 0.8s;
+  color: #ffffff;
 }
 
-span {
-  min-width: 120%;
+.container-slider__descr span {
+  display: block;
+  min-width: 100%;
+  color: #ffffff;
+  z-index: 2;
 }
 
 #slide-1:checked ~ .container-slider__items .container-slider__descr {
   transform: translateX(0%);
 }
+
 #slide-2:checked ~ .container-slider__items .container-slider__descr {
-  transform: translateX(-120%);  
+  transform: translateX(-100%);  
 }
+
 #slide-3:checked ~ .container-slider__items .container-slider__descr {
-  transform: translateX(-240%);
+  transform: translateX(-200%);
 }
+
 #slide-4:checked ~ .container-slider__items .container-slider__descr {
-  transform: translateX(-360%);
+  transform: translateX(-300%);
 }
+
 #slide-5:checked ~ .container-slider__items .container-slider__descr {
-  transform: translateX(-480%);
+  transform: translateX(-400%);
 }
 
 .container-slider__nav { 
@@ -135,7 +147,7 @@ span {
 .btn {
   transform: translate(-33%, -33%); 
   width: 2.5rem;
-  height: 2.5rem;  
+  height: 2.5rem;
 }
 
 .footer {
@@ -152,7 +164,7 @@ span {
 }
 
 .footer__link {
-  text-decoration: none;  
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -160,3 +172,20 @@ span {
   color: #6ea3ca;
 }
 
+@media (max-width: 799px) {
+  .header {
+    height: auto;
+    font-size: 1rem;
+  }
+
+  .container-slider__items {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .container-slider__descr {
+    width: 100%;   
+    align-self: flex-start;
+  }  
+}
